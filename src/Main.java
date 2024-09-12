@@ -79,7 +79,7 @@ public class Main {
             }
 
         }
-        //
+        ////
         int one = 180;
         int two = 505;
         int three = 100;
