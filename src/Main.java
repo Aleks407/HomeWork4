@@ -2,23 +2,21 @@ import javax.sql.rowset.serial.SQLOutputImpl;
 
 public class Main {
     public static void main(String[] args) {
-
-        int age = 17;
+//
+        int age = 20;
         System.out.println("Задача №1 ");
         if (age >= 18) {
             System.out.println("«Если возраст человека равен " + age + ",то он совершеннолетний.» ");
-        }
-        if (age < 18) {
+        } else {
             System.out.println("«Если возраст человека равен " + age + ",то он не достиг совершеннолетия, " +
                     "нужно немного подождать.» ");
         }
-
-        int temperature = 15;
+//
+        int temperature = 10;
         System.out.println("Задача №2 ");
         if (temperature <= 10) {
             System.out.println("«На улице " + temperature + " градусов, нужно надеть шапку.»");
-        }
-        if (temperature > 10) {
+        } else {
             System.out.println("«На улице " + temperature + " градусов, можно идти без шапки.»");
         }
         int speed = 20;
@@ -29,7 +27,8 @@ public class Main {
         if (speed <= 60) {
             System.out.println("«Если скорость " + speed + " то, можно ездить спокойно.»");
         }
-        int ageOfMen = 40;
+//
+        int ageOfMen = 20;
         System.out.println("Задача №4 ");
         if (ageOfMen >= 2 && ageOfMen <= 6) {
             System.out.println("«Если возраст человека равен "
@@ -43,11 +42,13 @@ public class Main {
         if (ageOfMen >= 18 && ageOfMen <= 24) {
             System.out.println("«Если возраст человека равен "
                     + ageOfMen + " то его место в университете.»");
-        } else {
+        }
+        if (ageOfMen >= 24) {
             System.out.println("«Если возраст человека равен "
                     + ageOfMen + ", то ему пора ходить на работу.»");
         }
-        int ageChildForAttraction = 10;
+//
+        int ageChildForAttraction = 14;
         System.out.println("Задача №5");
         if (ageChildForAttraction < 5) {
             System.out.println("«Если возраст ребенка равен "
@@ -56,7 +57,7 @@ public class Main {
 
         }
         boolean adult = true;
-        if (ageChildForAttraction >= 5 && ageChildForAttraction <= 14 && adult) {
+        if (adult && ageChildForAttraction >= 5 && ageChildForAttraction <= 14) {
             System.out.println("«Если возраст человека равен "
                     + ageChildForAttraction + " то, можно кататься на аттракционе в сопровождении взрослого.");
         } else {
@@ -65,34 +66,36 @@ public class Main {
 
 
         }
+        //
         int numberOfPassengers = 105;
         System.out.println("Задача №6");
         if (numberOfPassengers <= 60) {
             System.out.println("«В вагоне есть сидячие места.» ");
-        }
-
-        if (numberOfPassengers >= 60 && numberOfPassengers <= 102) {
-            System.out.println("«В вагоне есть только стоячие места.» ");
         } else {
-            System.out.println("«В вагоне мест нет.» ");
+            if (numberOfPassengers >= 60 && numberOfPassengers <= 102) {
+                System.out.println("«В вагоне есть только стоячие места.» ");
+            } else {
+                System.out.println("«В вагоне мест нет.» ");
+            }
+
         }
-        int one = 80000;
-        int two = 55005;
-        int three = 10000;
+        //
+        int one = 180;
+        int two = 505;
+        int three = 100;
         System.out.println("Задача №7");
 
         if (one > two && one > three) {
             System.out.println(one);
-        }
-        if (two> one && two > three) {
-            System.out.println(two);
-
-        }
-        if (three> two && three > one) {
-            System.out.println(three);
-
+        } else {
+            if (two > one && two > three) {
+                System.out.println(two);
+            } else {
+                System.out.println(three);
+            }
         }
     }
+
 }
 
 
